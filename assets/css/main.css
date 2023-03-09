@@ -1,4 +1,8 @@
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'Poppins';
   src: url('../font/Poppins-SemiBold.woff2') format('woff2'),
@@ -186,76 +190,96 @@ body {
   position: relative;
   height: 100%;
 }
-/* sidebar-styling */
+/* sidebar-styling */  
 .sidebar{
   background-color:#254270 ;
   min-height: 100vh;
+  padding: 0 !important;
 }
 .skypost-logo{
-  padding: 26px 0px 0px 32px ;
+  padding: 18px 0px 0px 24px;
 }
-.dropdowns{
-  padding: 30px 0px 0px 0px;
-  list-style: none;
+ .menu{
+  width: 100%;
+  margin-top: 16px;
+ }
+ .menu .item{
   position: relative;
-  display: inline-block;
-}
-.dropdown-active{
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  padding: 0px;
+  width: 100%;
+ }
+ .menu .item a{
   font-weight: 600;
   font-size: 12px;
-}
-.dropdowns>li {
-  padding: 14px 0px 14px 32px;
-}
-.dropdowns>li>a{
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 19px;
-  align-items: center;
-  color: #FFFFFF;
+  color: #fff;
   text-decoration: none;
-}
-.dropdowns>li >img{
-  margin-right: 10px;
-}
-.dropdowns>li >i{
-  margin-right: 10px;
-}
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #F86900 !important;
-  min-width: 120px;
-  padding: 12px 16px;
-  color: #ffffff;
-}
-.dropdown:hover .dropdown-menu {
   display: block;
-}
-.caret {
+  padding: 0px 30px;
+  line-height: 52px;
+ }
+ .menu .item a:hover{
+  background-color: #F86900;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: 0.3s ease;
+ }
+ .menu .item i{
+  margin-right: 0px;
+ } 
+ .menu .item a .dropdown{
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+ }
+ .menu .item .sub-menu{
+  background-color:#254270 ;
+  display: none;
+ }
+ .item a img{
+  margin-right: 5px;
+ }
+.menu .item .sub-menu a{
+  padding-left: 65px;
+  font-size: 12px;
+  background-color:#254270;
+  color: #FFFFFF;
+  line-height: 38px;
+  font-weight: 500;
+
+ }
+ .menu .item .sub-menu a:hover{
+  color: #F86900 !important;
+ }
+
+ .close-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 23px;
+  right:  0px;
+  margin: 15px;
+  cursor: pointer;
+ }
+ .menu-btn{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  margin: 25px;
+  cursor: pointer;
+ }
+ .caret {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 7px;
+  margin-left: 0px;
   vertical-align: middle;
   border-top: .3em solid;
   border-right: .3em solid transparent;
   border-left: .3em solid transparent;
-}
-.dropdown-menu li {
-  list-style: none;
-  color: #ffffff;
-}
-.dropdown-menu a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  padding: 10px 0px 5px 10px;
-  text-decoration: none !important;
-  color: #ffffff;
-}
-
+} 
 .fa-file-text{
   width: 18px;
   height: 18px;
@@ -297,7 +321,7 @@ body {
   width: 100%; 
 }
 .header{
-  padding: 28px 0px 0px 20px;
+  padding: 10px 0px 0px 10px;
   border-bottom: 0.5px solid #9E9E9E;
 }
 .dashboard-heading{
@@ -305,6 +329,7 @@ body {
   font-size: 24px;
   line-height: 26px;
   color: #254270;
+  padding-top: 10px;
 }
 .john-div{
   display: flex;

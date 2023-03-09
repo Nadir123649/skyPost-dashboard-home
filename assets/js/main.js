@@ -1,18 +1,5 @@
-const dropdowns = document.querySelectorAll('.dropdown');
-
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', () => {
-    // Toggle the active class on the clicked dropdown
-    dropdown.classList.toggle('active');
-    // Close all other dropdown menus
-    dropdowns.forEach(otherDropdown => {
-      if (otherDropdown !== dropdown) {
-        otherDropdown.classList.remove('active');
-      }
-    });
-  });
-});
-
+// newly included the js in the compute
+// have fun with js because it eas oo fast
 
 const toggleButton = document.querySelector('.sidebar-toggle-button');
 const sidebar = document.querySelector('.sidebar');

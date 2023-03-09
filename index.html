@@ -1,521 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/js/main.js">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/js/main.js" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
     <title>SkyPost Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid">
-		<!-- Top header -->
-		<div class="row">
-			<!-- Sidebar -->
-			<div class="col-md-2 sidebar" id="sidebar">
-                <div class="skypost-logo">
-                    <img src="./assets/images/skypost-logo.png" alt="logo-img" >
-                </div>
-				<ul class="dropdowns">
-					<li class="dropdown-active">
-                        <img src="./assets/images/dash-icon.png" alt="icon-img" >
-                        <a href="#">Dashboard
-                        </a>
-                    </li>
-					<li class="dropdown">
-                        <img src="./assets/images/bookings-icon.png" alt="icon-img" >
-                        <a href="#">
-                            Bookings 
-                             <span class="caret"></span>
-                        </a> 
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </li>
+      <!-- Top header -->
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar" id="sidebar">
+          <div class="skypost-logo">
+            <img src="./assets/images/skypost-logo.png" alt="logo-img" />
+          </div>
+          <div class="menu">
+            <div class="item">
+              <a href="#">
+                <img src="./assets/images/dash-icon.png" alt="icon-img" />
+                Dashboard
+              </a>
+            </div>
+            <div class="item">
+              <a class="sub-btn">
+                <img src="./assets/images/bookings-icon.png" alt="icon-img" />
+                Bookings
+                <span class="caret"></span>
+              </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item"> Create Bookings </a>
+                <a href="#" class="sub-item"> My Bookings </a>
+                <a href="#" class="sub-item"> Recieving Sheet </a>
+                <a href="#" class="sub-item"> Cancelled Shipments </a>
+                <a href="#" class="sub-item"> Order Pickup Details </a>
+                <a href="#" class="sub-item"> Bulk Import </a>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">
+                <img src="./assets/images/tracking-icon.png" alt="icon-img" />
+                Tracking
+                <span class="caret"></span>
+              </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item">Tacking by CNNO </a>
+                <a href="#" class="sub-item"> Tracking by Ref. No</a>
+                <a href="#" class="sub-item">Track All Bookings </a>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="./assets/images/gernal-interview-icon.png"
+                  alt="icon-img"
+                />
+                General Requests
+              </a>
+            </div>
+            <div class="item">
+              <a class="sub-btn">
+                <img src="./assets/images/shippments-icon.png" alt="icon-img" />
+                Shipment Return Requests
+                <span class="caret"></span>
+              </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item"> Return Requests </a>
+                <a href="#" class="sub-item"> Returned Requests </a>
+                <a href="#" class="sub-item"> Re-Attempt Requests</a>
+                <a href="#" class="sub-item"> Return Summary</a>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">
+                <img src="./assets/images/tracking-icon.png" alt="icon-img" />
+                Reports
+                <span class="caret"></span>
+              </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item"> Consignment Overall</a>
+                <a href="#" class="sub-item"> Consignment Summary </a>
+                <a href="#" class="sub-item"> Invoice Summary Report</a>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">
+                <img src="./assets/images/financial-icon.png" alt="icon-img" />
+                Financials
+                <span class="caret"></span>
+              </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item"> Financial Payments Details </a>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img src="./assets/images/api-icon.png" alt="icon-img" />
+                API Settings
+              </a>
+            </div>
+          </div>
+          <!-- footer-of-sidebar -->
+          <div class="footer-sidebar">
+            <div class="phone-icon">
+              <div class="icon-div">
+                <i class="fa fa-phone" aria-hidden="true"> </i>
+              </div>
+            </div>
+            <div class="footer-desc-div">
+              <p class="footer-desc">Need Help? Call Now!</p>
+              <p class="footer-desc">UAN: 111 222 333</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Main content -->
+        <div class="col-md-10 main-content">
+          <!-- header-section -->
 
-					<li class="dropdown">
-                        <img src="./assets/images/tracking-icon.png" alt="icon-img" > 
-                        <a href="#">
-                            Tracking
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item 1</a></li>
-                        </ul>
-                    </li>
-					<li class="dropdown">
-                        <img src="./assets/images/gernal-interview-icon.png" alt="icon-img" >
-                        <a href="#">
-                            General Requests 
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item 1</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <img src="./assets/images/shippments-icon.png" alt="icon-img" >
-                        <a href="#">
-                            Shipment Return Requests
-                        </a>
-                    </li>
-					<li class="dropdown">
-                        <i class="fa fa-file-text" aria-hidden="true"></i>
-                        <a href="#">
-                            Reports
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </li>
-					<li class="dropdown">
-                        <img src="./assets/images/financial-icon.png" alt="icon-img" > 
-                        <a href="#">
-                            Financials
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item 1</a></li>
-                        </ul>
-                    </li>
-					<li class="dropdown">
-                        <img src="./assets/images/api-icon.png" alt="icon-img" >
-                        <a href="#">
-                            API Settings
-                        </a>                        
-                    </li>
-				</ul>
-
-                <div class="footer-sidebar">
-                    <div class="phone-icon">
-                        <div class="icon-div">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                        </div>
-                        
-                    </div>
-                    <div class="footer-desc-div">
-                        <p class="footer-desc">Need Help? Call Now!</p>
-                        <p class="footer-desc">UAN: 111 222 333</p>
-                    </div>
-
-                </div>
-			</div>
-
-			<!-- Main content -->
-			<div class="col-md-10 main-content">
-                <!-- header-section -->
-
-                <section class="header-section">
-                    <div class="row header">
-                        <div class="col-md-6">
-                            <!-- <button class="slide-btn">&#9776;</button> -->
-                            <!-- <button class="btn btn-secondary" id="open-nav"><i class="fa fa-bars"></i></button> -->
-                            <h1 class="dashboard-heading">CLient</h1>
-                            <button type="button" class="sidebar-toggle-button">&#9776;</button>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <div class="john-div">
-                                <div class="text-john">
-                                    <p class="john-desc">
-                                        John Doe
-                                    </p>
-                                    <p class="john-small-desc">
-                                        ID: 10016
-                                    </p>
-                                </div>
-                                <div class="john-img">
-                                    <img src="./assets/images/john-img (2).png" alt="john-img">
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- filter-section -->
-
-                <section class="filter-section">
-                    <div class="row filter-input">
-                        <div class="col-md-3">
-                            <div class="shipments-div">
-                                <h1 class="shipments-heading">
-                                    Track Your Shipment
-                                </h1>
-                            </div>
-    
-                        </div>
-                        <div class="col-md-7">
-                            <div class="input-id">
-                                <input type="text" id="input" placeholder="Enter your ID here"  
-                                style="background-image: url('./assets/images/input-id.png');
-                                 background-repeat: no-repeat;
-                                  background-position: 25px center;
-                                   padding-left: 30px; font-weight: 400;
-                                   font-size: 14px;line-height: 22px;
-                                   color: #9E9E9E;">
-                                   
-                                <button class="track-btn">
-                                    Track
-                                </button>
-                            </div>
-    
-                        </div>
-                        <div class="col-md-2">
-                            <div class="date-picker">
-                                <input type="text" placeholder="This Week"id="datepicker">
-                                <span class="caret"></span>
-                              </div>
-                        </div>
-                    </div>
-    
-
-                </section>
-                
-                <!-- slot heading -->
-                <section class="slot-heading-section">
-                    <div class="row slot-heading">
-                        <div class="col-md-12">
-                            <h1 class="slot-heading">
-                                Your Booking Slot
-                            </h1>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- cards-section-charts -->
-                <section class="charts-section">
-                    <div class="row">
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card first-card">
-                          <div class="card-body">
-                            <div class="icon-img-none">
-                              <img src="./assets/images/car-card-icon.png" alt="card-img">
-                            </div>
-                            <h3 class="card-title">50</h3>
-                            <h5 class="card-text">Booked Shipments</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-two">
-                          <div class="card-body">
-                            <div class="icon-img">
-                              <img src="./assets/images/mesag-card.png" alt="card-img" class="main-img">
-                            </div>
-                            <h3 class="card-title">12</h3>
-                            <h5 class="card-text">Accepted Shipments</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-three">
-                          <div class="card-body">
-                            <div class="icon-img">
-                              <img src="./assets/images/home-card.png" alt="card-img" class="main-img">
-                            </div>
-                            <h3 class="card-title">25</h3>
-                            <h5 class="card-text">Warehouse Arrived Ship...</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-four">
-                          <div class="card-body">
-                            <div class="icon-img">
-                              <img src="./assets/images/box-card.png" alt="card-img" class="main-img">
-                            </div>
-                            <h3 class="card-title">14</h3>
-                            <h5 class="card-text">In-Transit Shipments</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-five">
-                          <div class="card-body">
-                            <div class="icon-img">
-                              <img src="./assets/images/tik-card.png" alt="card-img" class="main-img">
-                            </div>
-                            <h3 class="card-title">02</h3>
-                            <h5 class="card-text">Delivered Shipments</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-six">
-                          <div class="card-body">
-                            <div class="icon-img">
-                              <img src="./assets/images/open-card.png" alt="card-img" class="main-img">
-                            </div>
-                            <h3 class="card-title">04</h3>
-                            <h5 class="card-text">Return Shipments</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 mb-1 main-cols">
-                        <div class="card card-seven">
-                            <div class="card-body">
-                                <div class="icon-img">
-                                    <img src="./assets/images/close-card.png" alt="card-img" class="main-img">
-                                </div>
-                                <h3 class="card-title">01</h3>
-                                <h5 class="card-text">Cancelled Shipments</h5>
-                            </div>
-                        </div>
+          <section class="header-section">
+            <div class="row header">
+              <div class="col-md-6">
+                <h1 class="dashboard-heading">CLient</h1>
+                <button type="button" class="sidebar-toggle-button">
+                  &#9776;
+                </button>
+              </div>
+              <div class="col-md-6 text-right">
+                <div class="john-div">
+                  <div class="text-john">
+                    <p class="john-desc">John Doe</p>
+                    <p class="john-small-desc">ID: 10016</p>
                   </div>
-             </div>
-                </section>
-                  
+                  <div class="john-img">
+                    <img
+                      src="./assets/images/john-img (2).png"
+                      alt="john-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- filter-section -->
 
-                <!-- final section support -->
-                <section class="support-ticket-section">
-                    <div class="row support-ticket">
-                        <div class="col-md-3 ticket-col">
-                            <div class="support-div">
-                                <h1 class="support-heading">
-                                    Support Tickets
-                                </h1>
-                                <div class="main-profile">
-                                    <img src="./assets/images/anderson-ticket.png" alt="anderson"  class="ticket-img"> 
-                                    <div class="ticket-details">
-                                        <h2>John Doe</h2>
-                                        <p>johndoe@skypost.com</p>
-                                    </div>
-                                </div>
-                                <div class="main-profile">
-                                    <img src="./assets/images/herry-ticket.png" alt="Customer Image" class="ticket-img" >
-                                        <div class="ticket-details">
-                                            <h2>Mark Henry</h2>
-                                            <p>markhenry@skypost.com</p>
-                                        </div>
-                                </div>
-                                <div class="main-profile">
-                                    <img src="./assets/images/anderson-ticket.png" alt="Customer Image"  class="ticket-img">
-                                        <div class="ticket-details">
-                                            <h2>Anderson Kim</h2>
-                                            <p>andersonkim@skypost.com</p>
-                                        </div>
-                                </div>
-                                <div class="main-profile">
-                                    <img src="./assets/images/robert-ticket.png" alt="Customer Image" class="ticket-img" >
-                                        <div class="ticket-details">
-                                            <h2>Robert James</h2>
-                                            <p>robertjames@skypost.com</p>
-                                        </div>
-                                </div>
-                            </div>
-                          
-                        </div>
-                        <div class="col-md-9">
-                            <div class="row dileverd-section">
-                                <div class="col-md-6">
-                                    <div class="delivery-statistic">
-                                        <h3 class="deliver-main-heading">Delivery Statistics</h3>
-                                        <div class="statistic-wrapper">
-                                          <div class="statistic-box">
-                                            <div class="statistic-item">
-                                              <div class="status-box delivered"></div>
-                                              <div class="statistic-text">
-                                                <h4>Delievered</h4>
-                                                <p class="number">17</p>
-                                              </div>
-                                            </div>
-                                            <div class="statistic-item">
-                                              <div class="status-box in-transit"></div>
-                                              <div class="statistic-text">
-                                                <h4>Pending</h4>
-                                                <p class="number">04</p>
-                                              </div>
-                                            </div>
-                                            <div class="statistic-item">
-                                              <div class="status-box failed"></div>
-                                              <div class="statistic-text">
-                                                <h4>Cancelled</h4>
-                                                <p class="number">01</p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                            <div  id="pie"></div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="delivery-statistic">
-                                        <h3 class="deliver-main-heading">Order Statistics</h3>
-                                        <div class="statistic-wrapper">
-                                          <div class="statistic-box">
-                                            <div class="statistic-item">
-                                              <div class="status-box booked"></div>
-                                              <div class="statistic-text">
-                                                <h4>Booked</h4>
-                                                <p class="number">24</p>
-                                              </div>
-                                            </div>
-                                            <div class="statistic-item">
-                                              <div class="status-box processed"></div>
-                                              <div class="statistic-text">
-                                                <h4>Processing</h4>
-                                                <p class="number">07</p>
-                                              </div>
-                                            </div>
-                                            <div class="statistic-item">
-                                              <div class="status-box cancel"></div>
-                                              <div class="statistic-text">
-                                                <h4>Cancelled</h4>
-                                                <p class="number">02</p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                            <!-- <div class="circle progress"></div> -->
-                                            <div id="chart"></div>
-                                        </div>
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
+          <section class="filter-section">
+            <div class="row filter-input">
+              <div class="col-md-3">
+                <div class="shipments-div">
+                  <h1 class="shipments-heading">Track Your Shipment</h1>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="input-id">
+                  <input
+                    type="text"
+                    id="input"
+                    class="hero-input"
+                    placeholder="Enter your ID here"
+                    style="background-image: url('./assets/images/input-id.png');
+                    background-repeat: no-repeat;
+                    background-position: 25px center;
+                    padding-left: 30px; 
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #9E9E9E;"
+                  />
+                  <button class="track-btn">Track</button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="date-picker">
+                  <input type="text" placeholder="This Week" id="datepicker" />
+                  <span class="caret"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- slot heading -->
+          <section class="slot-heading-section">
+            <div class="row slot-heading">
+              <div class="col-md-12">
+                <h1 class="slot-heading">Your Booking Slot</h1>
+              </div>
+            </div>
+          </section>
+          <!-- cards-section-charts -->
+          <section class="charts-section">
+            <div class="row">
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card first-card">
+                  <div class="card-body">
+                    <div class="icon-img-none">
+                      <img
+                        src="./assets/images/car-card-icon.png"
+                        alt="card-img"
+                      />
                     </div>
-                </section>
-         </div>
-     </div>
- </div>
-                
+                    <h3 class="card-title">50</h3>
+                    <h5 class="card-text">Booked Shipments</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-two">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/mesag-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">12</h3>
+                    <h5 class="card-text">Accepted Shipments</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-three">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/home-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">25</h3>
+                    <h5 class="card-text">Warehouse Arrived Ship...</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-four">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/box-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">14</h3>
+                    <h5 class="card-text">In-Transit Shipments</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-five">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/tik-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">02</h3>
+                    <h5 class="card-text">Delivered Shipments</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-six">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/open-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">04</h3>
+                    <h5 class="card-text">Return Shipments</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 mb-2 main-cols">
+                <div class="card card-seven">
+                  <div class="card-body">
+                    <div class="icon-img">
+                      <img
+                        src="./assets/images/close-card.png"
+                        alt="card-img"
+                        class="main-img"
+                      />
+                    </div>
+                    <h3 class="card-title">01</h3>
+                    <h5 class="card-text">Cancelled Shipments</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- final section support -->
+          <section class="support-ticket-section">
+            <div class="row support-ticket">
+              <div class="col-md-3 ticket-col">
+                <div class="support-div">
+                  <h1 class="support-heading">Support Tickets</h1>
+                  <div class="main-profile">
+                    <img
+                      src="./assets/images/anderson-ticket.png"
+                      alt="anderson"
+                      class="ticket-img"
+                    />
+                    <div class="ticket-details">
+                      <h2>John Doe</h2>
+                      <p>johndoe@skypost.com</p>
+                    </div>
+                  </div>
+                  <div class="main-profile">
+                    <img
+                      src="./assets/images/herry-ticket.png"
+                      alt="Customer Image"
+                      class="ticket-img"
+                    />
+                    <div class="ticket-details">
+                      <h2>Mark Henry</h2>
+                      <p>markhenry@skypost.com</p>
+                    </div>
+                  </div>
+                  <div class="main-profile">
+                    <img
+                      src="./assets/images/anderson-ticket.png"
+                      alt="Customer Image"
+                      class="ticket-img"
+                    />
+                    <div class="ticket-details">
+                      <h2>Anderson Kim</h2>
+                      <p>andersonkim@skypost.com</p>
+                    </div>
+                  </div>
+                  <div class="main-profile">
+                    <img
+                      src="./assets/images/robert-ticket.png"
+                      alt="Customer Image"
+                      class="ticket-img"
+                    />
+                    <div class="ticket-details">
+                      <h2>Robert James</h2>
+                      <p>robertjames@skypost.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="row dileverd-section">
+                  <div class="col-md-6">
+                    <div class="delivery-statistic">
+                      <h3 class="deliver-main-heading">Delivery Statistics</h3>
+                      <div class="statistic-wrapper">
+                        <div class="statistic-box">
+                          <div class="statistic-item">
+                            <div class="status-box delivered"></div>
+                            <div class="statistic-text">
+                              <h4>Delievered</h4>
+                              <p class="number">17</p>
+                            </div>
+                          </div>
+                          <div class="statistic-item">
+                            <div class="status-box in-transit"></div>
+                            <div class="statistic-text">
+                              <h4>Pending</h4>
+                              <p class="number">04</p>
+                            </div>
+                          </div>
+                          <div class="statistic-item">
+                            <div class="status-box failed"></div>
+                            <div class="statistic-text">
+                              <h4>Cancelled</h4>
+                              <p class="number">01</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="pie"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="delivery-statistic">
+                      <h3 class="deliver-main-heading">Order Statistics</h3>
+                      <div class="statistic-wrapper">
+                        <div class="statistic-box">
+                          <div class="statistic-item">
+                            <div class="status-box booked"></div>
+                            <div class="statistic-text">
+                              <h4>Booked</h4>
+                              <p class="number">24</p>
+                            </div>
+                          </div>
+                          <div class="statistic-item">
+                            <div class="status-box processed"></div>
+                            <div class="statistic-text">
+                              <h4>Processing</h4>
+                              <p class="number">07</p>
+                            </div>
+                          </div>
+                          <div class="statistic-item">
+                            <div class="status-box cancel"></div>
+                            <div class="statistic-text">
+                              <h4>Cancelled</h4>
+                              <p class="number">02</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
 
-<!-- end -->
-<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.js"></script>
+    <!-- end -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //jquery for toggle sub menus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
 
- <script>
-               var options = {
-          series: [44, 55, 13, 43, 22],
-          chart: {
+    <script>
+      var options = {
+        series: [44, 55, 13, 43, 22],
+        chart: {
           width: 152,
-          height:152,
-          type: 'pie',
+          height: 152,
+          type: "pie",
         },
-        
+
         dataLabels: {
-    enabled: false
-      },
-        
+          enabled: false,
+        },
+
         // labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-       
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        width: 130,
-      },
-      legend: {
-        show: false
-      }
-    }
-  }],
-  legend: {
-    show: false // set show property to false to hide the legend
-  }
-};
-        var chart = new ApexCharts(document.querySelector("#pie"), options);
-        chart.render();
-      
-      
-</script> 
 
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 130,
+              },
+              legend: {
+                show: false,
+              },
+            },
+          },
+        ],
+        legend: {
+          show: false, // set show property to false to hide the legend
+        },
+      };
+      var chart = new ApexCharts(document.querySelector("#pie"), options);
+      chart.render();
+    </script>
 
-<script>
- 
- var options = {
-          series: [44, 55, 13, 33],
-          chart: {
+    <script>
+      var options = {
+        series: [44, 55, 13, 33],
+        chart: {
           width: 152,
-          height : 152,
-          type: 'donut',
+          height: 152,
+          type: "donut",
         },
         dataLabels: {
-    enabled: false
-      },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 132
+          enabled: false,
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 132,
+              },
+              legend: {
+                show: false,
+              },
             },
-            legend: {
-              show: false
-            }
-          }
-        }],
+          },
+        ],
         legend: {
-    show: false // set show property to false to hide the legend
-  }
-        };
+          show: false, // set show property to false to hide the legend
+        },
+      };
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-      
-      
-        function appendData() {
-        var arr = chart.w.globals.series.slice()
-        arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+
+      function appendData() {
+        var arr = chart.w.globals.series.slice();
+        arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1);
         return arr;
       }
-      
+
       function removeData() {
-        var arr = chart.w.globals.series.slice()
-        arr.pop()
+        var arr = chart.w.globals.series.slice();
+        arr.pop();
         return arr;
       }
-      
+
       function randomize() {
-        return chart.w.globals.series.map(function() {
-            return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-        })
+        return chart.w.globals.series.map(function () {
+          return Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+        });
       }
-      
+
       function reset() {
-        return options.series
+        return options.series;
       }
-      
-      document.querySelector("#randomize").addEventListener("click", function() {
-        chart.updateSeries(randomize())
-      })
-      
-      document.querySelector("#add").addEventListener("click", function() {
-        chart.updateSeries(appendData())
-      })
-      
-      document.querySelector("#remove").addEventListener("click", function() {
-        chart.updateSeries(removeData())
-      })
-      
-      document.querySelector("#reset").addEventListener("click", function() {
-        chart.updateSeries(reset())
-      })
-      
-</script>
-<script>
-    const toggleButton = document.querySelector('.sidebar-toggle-button');
-const sidebar = document.querySelector('.sidebar');
 
-toggleButton.addEventListener('click', () => {
-  sidebar.classList.toggle('show');
-});
-</script>
+      document
+        .querySelector("#randomize")
+        .addEventListener("click", function () {
+          chart.updateSeries(randomize());
+        });
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/js/jquery.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/main.js"></script>
-<script
-  src="https://kit.fontawesome.com/ce278ed6db.js"
-  crossorigin="anonymous"
- ></script>
+      document.querySelector("#add").addEventListener("click", function () {
+        chart.updateSeries(appendData());
+      });
 
-   
-</body>
+      document.querySelector("#remove").addEventListener("click", function () {
+        chart.updateSeries(removeData());
+      });
+
+      document.querySelector("#reset").addEventListener("click", function () {
+        chart.updateSeries(reset());
+      });
+    </script>
+    <script>
+      const toggleButton = document.querySelector(".sidebar-toggle-button");
+      const sidebar = document.querySelector(".sidebar");
+
+      toggleButton.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce278ed6db.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
