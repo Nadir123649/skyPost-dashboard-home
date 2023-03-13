@@ -48,7 +48,7 @@
                 <span class="caret"></span>
               </a>
               <div class="sub-menu">
-                <a href="#" class="sub-item"> Create Bookings </a>
+                <a href="./createbookings.html" class="sub-item"> Create Bookings </a>
                 <a href="#" class="sub-item"> My Bookings </a>
                 <a href="#" class="sub-item"> Recieving Sheet </a>
                 <a href="#" class="sub-item"> Cancelled Shipments </a>
@@ -444,6 +444,22 @@
       charset="utf-8"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+      const checkbox = document.querySelector('input[type="checkbox"]');
+
+checkbox.addEventListener('change', function() {
+  if (checkbox.checked) {
+    console.log('Switch is on');
+    // Perform action for "on" state
+  } else {
+    console.log('Switch is off');
+    // Perform action for "off" state
+  }
+});
+    </script>
     <script type="text/javascript">
       $(document).ready(function () {
         //jquery for toggle sub menus

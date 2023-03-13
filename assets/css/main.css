@@ -700,10 +700,238 @@ body {
 .sidebar-toggle-button {
   display: none;
 }
+/* create-bookings-styling */
+.main-create-booking-heading{
+  font-weight: 500;
+  font-size: 18px; 
+  line-height: 26px;
+  color: #333333;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.create-bookings-row{
+  border: 0.37px solid #9E9E9E;
+}
+.main-create-bookings{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding-top: 15px;
+  padding-left: 22px;
+}
+.document-box{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 25px;
+  padding: 14px 68px 8px 68px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+.document-box:hover{
+  background: #FFFFFF;
+  border: 2px solid #F86900;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
 
 
+/* switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 34px;
+  transition: background-color 0.2s;
+  border: 1px solid #C4C4C4;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;  
+  background: #9E9E9E;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+input:checked + .slider {
+  background-color: #ffffff;
+}
+input:checked + .slider:before {
+  transform: translateX(23px);
+  background: linear-gradient(180deg, #F86900 0%, #FF8F3D 100%);
+}
+.main-slide-down{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding-top: 40px;
+}
+.one-box , .two-box , .three-box , .four-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.inner-desc{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+}
+.slide-down-row{
+  border: 0.37px solid #9E9E9E;
+}
+/* method section styling */
+.methods-heading{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.main-methods-collection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+}
+.method-box{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 25px;
+  padding: 14px 40px 10px 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+.method-inner-desc{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+}
+.method-box:hover{
+  background: #FFFFFF;
+  border: 2px solid #F86900;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
 
 
+/* booking */
+.booking-heading{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.booking-form-row{
+  background: #F3F3F3;
+  border: 1px solid #9E9E9E;
+}
+.main-booking-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding-top: 24px;
+}
+.booking-box{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 20px;
+}
+.methods-desc{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+}
+.small-input-copy{
+  width: 181px;
+  height: 38px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.copy-input-value{
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 36px;
+  color: #4F4F4F;
+}
+/* wizard */
+.wizard {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.wizard::before{
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.wizard-list>li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input:focus + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: white;
+  padding: 0 5px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
 
 @media only screen and (max-width: 767px) {
   .main-cols{
