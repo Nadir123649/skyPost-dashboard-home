@@ -50,7 +50,7 @@
                 </a>
                 <div class="sub-menu">
                   <a href="./createbookings.html" class="sub-item"> Create Bookings </a>
-                  <a href="#" class="sub-item"> My Bookings </a>
+                  <a href="./mybookings.html" class="sub-item"> My Bookings </a>
                   <a href="#" class="sub-item"> Recieving Sheet </a>
                   <a href="#" class="sub-item"> Cancelled Shipments </a>
                   <a href="#" class="sub-item"> Order Pickup Details </a>
@@ -381,62 +381,116 @@
                                     </ul>
                                 </div>
                                 <div class="form-content" data-form-tab>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                    <div class="row first-col">
+                                        <div class="col-md-4 left-inputs">
+                                          <div class="form-group">
+                                            <input type="text" id="fullname" name="fullname" required>
+                                            <label for="fullname">Full Name</label>
+                                          </div>
+                                              <div class="form-group">
+                                                <input type="text" id="Returncity" name="Returnciy" required>
+                                                <label for="returncity">Return City</label>
                                               </div>
                                               <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                                <input type="text" id="number" name="number" required>
+                                                <label for="number">Phone Number 2</label>
                                               </div>
                                               <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
-                                              </div>
-                                              <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
-                                              </div>
+                                                <input type="text" id="pickup" name="pickup" required>
+                                                <label for="pickup">Pickup Address</label>
+                                              </div> 
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                                <input type="text" id="city" name="city" required>
+                                                <label for="city">Origin City</label>
                                               </div>
                                               <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                                <input type="text" id="number" name="number" required>
+                                                <label for="number">Phone Number 1</label>
                                               </div>
                                               <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                                <input type="text" id="email" name="email" required>
+                                                <label for="email">Email</label>
                                               </div>
                                               <div class="form-group">
-                                                <input type="text" id="lastname" name="lastname" required>
-                                                <label for="lastname">Last Name</label>
+                                                <input type="text" id="address" name="address" required>
+                                                <label for="address">Return Address</label>
                                               </div>
                                         </div>
                                     </div>             
                                 </div>
                                 <div class="form-content" data-form-tab>
-                                    <h1>Second stage</h1>
-                                    <div class="form-item" data-form-item>
-                                        <label for="input2" class="form-label">Label second</label>
-                                        <input class="form-input" data-form-input id="input2" type="text" placeholder="Enter text">
+                                   <div class="row">
+                                    <div class="col-md-4 left-inputs">
+                                      <div class="form-group">
+                                        <input type="text" id="fullname" name="fullname" required>
+                                        <label for="full-name">Full Name</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" id="city" name="city" required>
+                                        <label for="city">Destination City</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" id="email" name="email" required>
+                                        <label for="email">Email</label>
+                                      </div>
                                     </div>
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <input type="text" id="address" name="address" required>
+                                        <label for="address">Address</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" id="number" name="number" required>
+                                        <label for="number">Phone Number</label>
+                                      </div>                                      
+                                    </div>
+                                   </div>
                                 </div>
                                 <div class="form-content" data-form-tab>
-                                    <h1>Third stage</h1>
-                                    <div class="form-item" data-form-item>
-                                        <label for="input3" class="form-label">Label third</label>
-                                        <input class="form-input" data-form-input id="input3" type="text" placeholder="Enter text">
+                                  <div class="row">
+                                    <div class="col-md-4 left-inputs">
+                                      <div class="form-group">
+                                        <input type="text" id="service" name="service" required>
+                                        <label for="service">Service Type</label>
+                                      </div>
+                                          <div class="form-group">
+                                            <input type="text" id="weight" name="weight" required>
+                                            <label for="weight">Weight (Kg)</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="text" id="desc" name="desc" required>
+                                            <label for="desc">Product Description</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="text" id="payment" name="payment" required>
+                                            <label for="payment">Payment Mode</label>
+                                          </div>
                                     </div>
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <input type="text" id="pieses" name="pieces" required>
+                                        <label for="Pieces">Pieces</label>
+                                      </div>
+                                          <div class="form-group">
+                                            <input type="text" id="Product" name="Product" required>
+                                            <label for="Product">Product Category</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="text" id="order" name="order" required>
+                                            <label for="order">Order ID</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="text" id="delivery" name="delivery" required>
+                                            <label for="delievery">Cash on Delivery Amount</label>
+                                          </div>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="form-buttons">
-                                    <button class="btn bordered" type="button" data-btn-previous="true">Return</button>
-                                    <button class="btn primary" type="button" data-btn-next="true">Next</button>
+                                <div class="form-buttons d-flex">
+                                    <button class="return" type="button" data-btn-previous="true">Back</button>
+                                    <button class="next" type="button" data-btn-next="true">Next</button>
                                 </div>
                             </form>
                         </div>
@@ -451,7 +505,7 @@
 
       <!-- scripts -->
       <script>
-        let wizardBar = document.querySelector('[data-wizard-bar]')
+        // let wizardBar = document.querySelector('[data-wizard-bar]')
 let btnPrevious = document.querySelector('[data-btn-previous]')
 let currentTab = 0;
 showTab(currentTab);
@@ -494,24 +548,24 @@ function validateForm() {
   return valid;
 }
 
-function updateWizardBarWidth() {
-  const activeWizards = document.querySelectorAll(".wizard-item.active");
-  let wizardItem = document.querySelectorAll('[data-wizard-item]')
-  const currentWidth = ((activeWizards.length - 1) / (wizardItem.length - 1)) * 100;
+// function updateWizardBarWidth() {
+//   const activeWizards = document.querySelectorAll(".wizard-item.active");
+//   let wizardItem = document.querySelectorAll('[data-wizard-item]')
+//   const currentWidth = ((activeWizards.length - 1) / (wizardItem.length - 1)) * 100;
 
-  wizardBar.style.width = currentWidth + "%";
-}
+//   wizardBar.style.width = currentWidth + "%";
+// }
 
 document.querySelector('*').addEventListener('click', function (event) {
   if (event.target.dataset.btnPrevious) {
     let wizardItem = document.querySelectorAll('[data-wizard-item]')
     wizardItem[currentTab].classList.remove('active')
     nextPrev(-1)
-    updateWizardBarWidth()
+    // updateWizardBarWidth()
   }
   if (event.target.dataset.btnNext) {
     nextPrev(1)
-    updateWizardBarWidth()
+    // updateWizardBarWidth()
   }
 })
 

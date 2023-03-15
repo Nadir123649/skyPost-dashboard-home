@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/js/main.js" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/apexcharts@3.26.1/dist/apexcharts.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <title>SkyPost Dashboard</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- Top header -->
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-md-2 sidebar" id="sidebar">
+            <div class="skypost-logo">
+              <img src="./assets/images/skypost-logo.png" alt="logo-img" />
+            </div>
+            <div class="menu">
+              <div class="item">
+                <a href="./index.html">
+                  <img src="./assets/images/dash-icon.png" alt="icon-img" />
+                  Dashboard
+                </a>
+              </div>
+              <div class="item">
+                <a class="sub-btn">
+                  <img src="./assets/images/bookings-icon.png" alt="icon-img" />
+                  Bookings
+                  <span class="caret"></span>
+                </a>
+                <div class="sub-menu">
+                  <a href="./createbookings.html" class="sub-item"> Create Bookings </a>
+                  <a href="./mybookings.html" class="sub-item"> My Bookings </a>
+                  <a href="#" class="sub-item"> Recieving Sheet </a>
+                  <a href="#" class="sub-item"> Cancelled Shipments </a>
+                  <a href="#" class="sub-item"> Order Pickup Details </a>
+                  <a href="#" class="sub-item"> Bulk Import </a>
+                </div>
+              </div>
+              <div class="item">
+                <a class="sub-btn">
+                  <img src="./assets/images/tracking-icon.png" alt="icon-img" />
+                  Tracking
+                  <span class="caret"></span>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" class="sub-item">Tacking by CNNO </a>
+                  <a href="#" class="sub-item"> Tracking by Ref. No</a>
+                  <a href="#" class="sub-item">Track All Bookings </a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img
+                    src="./assets/images/gernal-interview-icon.png"
+                    alt="icon-img"
+                  />
+                  General Requests
+                </a>
+              </div>
+              <div class="item">
+                <a class="sub-btn">
+                  <img src="./assets/images/shippments-icon.png" alt="icon-img" />
+                  Shipment Return Requests
+                  <span class="caret"></span>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" class="sub-item"> Return Requests </a>
+                  <a href="#" class="sub-item"> Returned Requests </a>
+                  <a href="#" class="sub-item"> Re-Attempt Requests</a>
+                  <a href="#" class="sub-item"> Return Summary</a>
+                </div>
+              </div>
+              <div class="item">
+                <a class="sub-btn">
+                  <img src="./assets/images/tracking-icon.png" alt="icon-img" />
+                  Reports
+                  <span class="caret"></span>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" class="sub-item"> Consignment Overall</a>
+                  <a href="#" class="sub-item"> Consignment Summary </a>
+                  <a href="#" class="sub-item"> Invoice Summary Report</a>
+                </div>
+              </div>
+              <div class="item">
+                <a class="sub-btn">
+                  <img src="./assets/images/financial-icon.png" alt="icon-img" />
+                  Financials
+                  <span class="caret"></span>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" class="sub-item"> Financial Payments Details </a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="./assets/images/api-icon.png" alt="icon-img" />
+                  API Settings
+                </a>
+              </div>
+            </div>
+            <!-- footer-of-sidebar -->
+            <div class="footer-sidebar">
+              <div class="phone-icon">
+                <div class="icon-div">
+                  <i class="fa fa-phone" aria-hidden="true"> </i>
+                </div>
+              </div>
+              <div class="footer-desc-div">
+                <p class="footer-desc">Need Help? Call Now!</p>
+                <p class="footer-desc">UAN: 111 222 333</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Main content -->
+          <div class="col-md-10 main-content">
+            <!-- header-section -->
+            <section class="header-section">
+                <div class="row header">
+                  <div class="col-md-6">
+                    <h1 class="dashboard-heading">Bookings</h1>
+                    <button type="button" class="sidebar-toggle-button">
+                      &#9776;
+                    </button>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <div class="john-div">
+                      <div class="text-john">
+                        <p class="john-desc">John Doe</p>
+                        <p class="john-small-desc">ID: 10016</p>
+                      </div>
+                      <div class="john-img">
+                        <img
+                          src="./assets/images/john-img (2).png"
+                          alt="john-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <!-- inputs id section -->
+            <section class="booking-input-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="my-booking-heading">
+                            My Bookings
+                        </h1>
+                        <div class="row booking-input-row">
+                            <div class="col-md-4">
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Date From:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text" placeholder="2021-07-11">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Order ID From:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Origin City:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Booked by:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Date To:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text"  placeholder="2021-07-11">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Order ID To:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Destination City :
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Tracking No:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text"  placeholder="100287">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Consignee Name:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="main-left-right-input">
+                                    <div class="left-inner-value">
+                                        <label for="data-form" class="value-booking">
+                                            Status:
+                                        </label>
+                                    </div>
+                                    <div class="right-inner-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- inline buttons section -->
+            <section class="inline-buttons-section">
+                <div class="row">
+                    <div class="col-md-8 pt-3">
+                        <button class="btn btn-primary d-inline-block mx-1">
+                            <img src="./assets/images/excel.icon.png" alt="Image" class="btn-icon">
+                            <span class="btn-text">Excel</span>
+                        </button>
+                        <button class="btn btn-primary d-inline-block mx-1">
+                            <img src="./assets/images/print-icon-png.png" alt="Image" class="btn-icon">
+                            <span class="btn-text">Print</span>
+                        </button>
+                        <button class="btn btn-primary d-inline-block mx-1">
+                            <img src="./assets/images/plus-icon-png.png" alt="Image" class="btn-icon">
+                            <span class="btn-text">Add Request</span>
+                        </button>
+                        <button class="btn btn-primary d-inline-block mx-1">Select All</button>
+                        <button class="btn btn-primary d-inline-block mx-1">Select None</button>
+                        <button class="btn btn-primary d-inline-block mx-1">Cancel</button>
+                    </div>
+                    <div class="col-md-4 pt-3 text-right-row">
+                        <div class="text-right">
+                            <select>
+                              <option value="1">Any Time </option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 2</option>
+                              <option value="4">Option 3</option>
+                            </select>
+                          </div>
+                    </div>
+                </div>       
+            </section>
+            <!-- table section -->
+            <section class="table-entry-section">
+                <div class="row">
+                    <div class="col-md-12 pt-2 table-row">
+                        <table class="table table-responsive">
+                            <thead>
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Sr. No</th>
+                                <th scope="col">Booking Date</th>
+                                <th scope="col">Consignment Number</th>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Shipment Type</th>
+                                <th scope="col">Shipment Service</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Product Detail</th>
+                                <th scope="col">Consignee Name</th>
+                                <th scope="col">Consignee Contact</th>
+                                <th scope="col">Consignee Email</th>
+                                <th scope="col">Origin</th>
+                                <th scope="col">Destination</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox"></td>
+                                <td>01</td>
+                                <td>17241014135194</td>
+                                <td>Faashing Wear</td>
+                                <td>383</td>
+                                <td>Regular</td>
+                                <td>House No 72B, Street 17 G-10/2 Islamabad</td>
+                                <td>Islamabad</td>
+                                <td>Kharian</td>
+                                <td>2022-09-12 14:28:01</td>
+                                <td>03124912721</td>
+                                <td>johndoe@gmail.com</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox"></td>
+                                <td>02</td>
+                                <td>1722310141334</td>
+                                <td>Faashing dear</td>
+                                <td>385</td>
+                                <td>Regulars</td>
+                                <td>House No 73a, Street 17 G-10/2 Islamabad</td>
+                                <td>karachi</td>
+                                <td>sailkot</td>
+                                <td>2022-09-12 14:28:01</td>
+                                <td>03124912721</td>
+                                <td>firedoe@gmail.com</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </section>
+            <!-- footer section -->
+            <section class="footer-pagination">
+                <div class="row">
+                    <div class="col-md-6 py-5 d-flex align-items-center  entries-page">
+                        <div class="entries-div">
+                            <label for="show-entries" class="show-entries">Show Entries:</label>
+                        </div>
+                        <div class="show-entries">
+                          <input type="number" class="custom-input" value="0">        
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-5  inner-pagination">
+                        <nav aria-label="Page navigation" class="main-pages">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+      </div>
+
+    <!-- scripts -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    charset="utf-8"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //jquery for toggle sub menus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
+    <script>
+      const toggleButton = document.querySelector(".sidebar-toggle-button");
+      const sidebar = document.querySelector(".sidebar");
+
+      toggleButton.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce278ed6db.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  </html>

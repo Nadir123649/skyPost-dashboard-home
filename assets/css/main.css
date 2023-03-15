@@ -189,15 +189,37 @@ html,
 body {
   position: relative;
   height: 100%;
+  width: 100%;
 }
 /* sidebar-styling */  
 .sidebar{
   background-color:#254270 ;
   min-height: 100vh;
+  width: 270px;
   padding: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 5;
+}
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+  height: 50%;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color:#F86900;
+  border-radius: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #F86900;;
 }
 .skypost-logo{
-  padding: 18px 0px 0px 24px;
+  padding: 18px 0px 0px 18px;
 }
  .menu{
   width: 100%;
@@ -217,7 +239,7 @@ body {
   color: #fff;
   text-decoration: none;
   display: block;
-  padding: 0px 30px;
+  padding: 0px 23px;
   line-height: 52px;
  }
  .menu .item a:hover{
@@ -286,10 +308,11 @@ body {
   color: #ffffff;
 }
 .footer-sidebar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 200px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 230px 0px 0px 0px;
+  gap: 10px;
 }
 .icon-div{
   width: 32.62px;
@@ -318,7 +341,14 @@ body {
 /* main-content-starts */
 .main-content{
   min-height: 100vh !important;
-  width: 100%; 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 16.5%; 
+  /* margin-left: 270px;
+  width: calc(100% - 270px); */
+  height: 100%;
+  overflow-y: auto;
 }
 .header{
   padding: 10px 0px 0px 10px;
@@ -356,8 +386,12 @@ body {
 }
 
 /* shipments styling */
-
-
+.form-content {
+  display: none;
+}
+.form-content.active {
+  display: block;
+}
 .filter-input{
     display: flex;
     justify-content: center;
@@ -709,9 +743,6 @@ body {
   padding-top: 15px;
   padding-left: 5px;
 }
-.create-bookings-row{
-  border: 0.37px solid #9E9E9E;
-}
 .main-create-bookings{
   display: flex;
   align-items: center;
@@ -797,8 +828,11 @@ input:checked + .slider:before {
   line-height: 36px;
   color: #333333;
 }
+.create-bookings-row{
+  border-bottom: 0.37px solid #9E9E9E;
+}
 .slide-down-row{
-  border: 0.37px solid #9E9E9E;
+  border-bottom: 0.37px solid #9E9E9E;
 }
 /* method section styling */
 .methods-heading{
@@ -841,6 +875,8 @@ input:checked + .slider:before {
 }
 
 
+
+
 /* booking */
 .booking-heading{
   font-weight: 500;
@@ -852,7 +888,8 @@ input:checked + .slider:before {
 }
 .booking-form-row{
   background: #F3F3F3;
-  border: 1px solid #9E9E9E;
+  border-bottom: 1px solid #9E9E9E;
+  border-top: 1px solid #9E9E9E;
 }
 .main-booking-div{
   display: flex;
@@ -874,7 +911,7 @@ input:checked + .slider:before {
   color: #333333;
 }
 .small-input-copy{
-  width: 181px;
+  padding: 1px 47px 33px 48px;
   height: 38px;
   background: #FFFFFF;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -888,6 +925,10 @@ input:checked + .slider:before {
   color: #4F4F4F;
 }
 /* wizard */
+ul {
+  /* padding-left: 2rem; */
+  padding-left: 0 !important;
+}
 .wizard {
   position: relative;
   display: flex;
@@ -907,31 +948,355 @@ input:checked + .slider:before {
     display: inline-block;
     padding: 20px;
 }
+.wizard-item{
+  border-bottom: 2px solid transparent;
+}
+
+.wizard-item.active::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  width: 181px;
+  height: 4px;
+  background: #F86900;
+  border-radius: 9px;
+
+}
+
+.wizard-item:not(.active)::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  width: 181px;
+  height: 4px;
+  background: #F86900;
+  border-radius: 9px ; 
+}
+/* .wizard-item.active::after{
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  width: 181px;
+  height: 4px;
+  background: #F86900;
+  border-radius: 9px;
+} */
 
 .form-group {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-
 .form-group input:focus + label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20%;
+  left: 2%;
   transform: translateY(-100%);
   background-color: white;
   padding: 0 5px;
   font-size: 12px;
   transition: all 0.3s ease;
 }
-
 .form-group label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30%;
+  left: 5%;
   transform: translateY(0);
   transition: all 0.3s ease;
   pointer-events: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9E9E9E;
 }
+.form-group input{
+  width: 70% !important; 
+  height: 55px;
+  border: 1px solid #9E9E9E;
+  border-radius: 4px;
+  text-indent: 20px;
+}
+.form-group input.empty + label {
+  top: 30%;
+  font-size: 14px;
+}
+
+.form-group input:not(.empty):focus {
+  outline: none;
+}
+
+.form-group input:not(.empty):focus + label {
+  top: 20%;
+  font-size: 12px;
+}
+
+.form-group input:not(.empty):focus + label,
+.form-group input:not(.empty):valid + label {
+  background-color: white;
+  padding: 0 5px;
+  font-size: 12px;
+  transform: translateY(-120%);
+}
+.form-buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  margin-left: 1.5%;
+}
+.next{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #F3F3F3;
+  background: #F86900;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 10px 50px 10px 50px;
+}
+.return{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #F3F3F3;
+  background: #9E9E9E;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 10px 50px 10px 50px;
+}
+.main-left-right-input{
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+/* my bookings css */
+.my-booking-heading{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  padding: 20px 0px 0px 10px; 
+}
+.left-inner-value label{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 36px;
+  color: #333333;
+  padding-left: 60px;
+}
+.right-inner-input input{
+  color: rgb(79, 79, 79);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 7px 10px;
+  width: 100%;
+  max-width: 150px;
+  height: 35px;
+  border: 1px solid #9E9E9E;
+}
+.booking-input-row{
+  padding-right: 30px;
+  border-bottom: 1px solid #9E9E9E;
+}
+.right-inner-input input::placeholder{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #4F4F4F;
+  text-align: center;
+}
+/* button inline section */
+.btn-icon {
+  display: inline-block;
+  width: auto; /* adjust as needed */
+  height: auto; /* adjust as needed */
+  margin-right: 0.5rem; /* adjust as needed */
+
+}
+.btn-text {
+  display: inline-block;
+}
+.btn-primary{
+  height: 33px;
+  background: #254270 !important;
+  border-radius: 6px;
+  font-weight: 400 !important;
+  font-size: 11px !important;
+  color: #FFFFFF;
+}
+.btn-primary span{
+  font-weight: 400;
+  font-size: 11px;
+  color: #FFFFFF;
+}
+.text-right-row{
+  padding-right: 30px !important;
+}
+.text-right select{
+  float: right;
+  background: #FFFFFF;
+  border: 1px solid #9E9E9E;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 96px;
+  height: 35px;
+  box-sizing: border-box!important;
+  color: #4f4f4f!important;
+  display: inline-block!important;
+  font-size: 11.67px!important;
+  font-weight: 400!important;
+  line-height: inherit!important;
+  padding: 7px 9px!important;
+}
+.text-right select:focus{
+  border: 1px solid #9E9E9E;
+  outline: none;
+}
+.text-right select option{
+  font-weight: 400;
+  font-size: 11.67px;
+  color: #4F4F4F;
+}
+/* table styling */
+.table-row{
+  overflow-x: auto;
+}
+.table-row::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+.table-row::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+.table-row::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+.table-responsive{
+   width: 100% !important;
+   border-collapse: collapse; 
+}
+tr th{
+  font-weight: 400;
+  font-size: 14px;
+  color: #4F4F4F;
+  background: #F3F3F3 !important;
+  border: 1px solid #9E9E9E;
+  padding: 20px !important;
+}
+tr td{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #4F4F4F;
+  border: 0.5px solid #9E9E9E;
+  background: #F5F5F5;
+  padding: 35px 9px 20px 10px!important;
+  vertical-align: middle;
+}
+.left-inputs .form-group{
+  margin-left: 5% !important; 
+} 
+.inner-pagination{
+  padding-right: 30px !important;
+}
+.main-pages{
+  float: right !important;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.pagination .page-link {
+  background-color: #fff;
+  border-radius: 5px !important;
+  color: black;
+  font-size: 12px !important;
+  border: 0.729167px solid #828282;
+  padding: 10px 18px 10px 12px;
+}
+.pagination .page-link:hover {
+  background: #254270;
+  border-radius: 5px;
+  color: #ffffff;
+  border: 0.729167px solid #828282;
+}
+.pagination .page-item.active .page-link {
+  background: #254270;
+  border-radius: 5px;
+  border: 0.729167px solid #828282;
+  color: #fff;
+}
+.main-pages .page-link:active,
+.main-pages .page-link:focus {
+  background: #254270;
+  border-radius: 5px;
+  border: 0.729167px solid #828282;
+  color: #fff;
+}
+.main-pages .page-link:focus {
+  box-shadow: none;
+}
+.show-entries{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4F4F4F;
+}
+.custom-input {
+  border: none; /* remove border */
+  appearance: none; /* remove default styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 50px; /* set width to desired size */
+  padding: 0 5px; /* add padding for spacing */
+}
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-moz-inner-spin-button,
+.custom-input::-moz-outer-spin-button,
+.custom-input::-ms-inner-spin-button,
+.custom-input::-ms-outer-spin-button {
+  height: auto;
+}
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-moz-inner-spin-button,
+.custom-input::-moz-outer-spin-button,
+.custom-input::-ms-inner-spin-button,
+.custom-input::-ms-outer-spin-button {
+  opacity: 1;
+}
+.custom-input:focus {
+  outline: none; /* remove focus outline */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 767px) {
   .main-cols{
@@ -953,7 +1318,7 @@ input:checked + .slider:before {
     color: white !important;
     background-color: #254270 ;
   }
-}
+} 
 @media only screen and (max-width: 767px) {
   .sidebar {
     width: 250px !important;
